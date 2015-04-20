@@ -1,12 +1,9 @@
 # coding: utf-8
+# QGraphicsView를 이용하여 Hello World 출력
 
 import sys
 from PyQt5 import QtWidgets
 from PyQt5 import QtCore
-from PyQt5 import QtGui
-import time
-from PyQt5.QtCore import pyqtSlot
-import random
 
 class Form(QtWidgets.QWidget):
     def __init__(self):

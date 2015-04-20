@@ -16,7 +16,11 @@ class Form(QtWidgets.QDialog):
 
     @pyqtSlot()
     def slot_1st(self):
-        self.ui.label.setText("첫번째 버튼")
+        pixmap_1 = QtGui.QPixmap(100, 100) # 100x100 사이즈로 선언
+        pixmap_1.load("Penguins.jpg") # 그림을 불러옴
+        pixmap_1 = pixmap_1.scaledToWidth(200) # QPixmap의 scaledToWidth는 반환값을 QPixmap의 변경된 그림 준다.
+        self.ui.label.setPixmap(pixmap_1)
+
 
     @pyqtSlot()
     def slot_2nd(self):

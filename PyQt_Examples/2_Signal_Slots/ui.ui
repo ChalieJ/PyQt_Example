@@ -19,11 +19,11 @@
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>227</height>
+       <height>200</height>
       </size>
      </property>
      <property name="text">
-      <string>이곳에 표시 됩니다.</string>
+      <string>여기에 출력됩니다.</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -31,25 +31,37 @@
     </widget>
    </item>
    <item>
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>1st</string>
+        <string>첫번째 버튼</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>2nd</string>
+        <string>두번째 버튼</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>3rd</string>
+        <string>세번째 버튼</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -66,12 +78,12 @@
    <slot>slot_1st()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>70</x>
-     <y>265</y>
+     <x>77</x>
+     <y>275</y>
     </hint>
     <hint type="destinationlabel">
-     <x>70</x>
-     <y>285</y>
+     <x>77</x>
+     <y>294</y>
     </hint>
    </hints>
   </connection>
@@ -82,12 +94,12 @@
    <slot>slot_2nd()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>182</x>
-     <y>269</y>
+     <x>187</x>
+     <y>264</y>
     </hint>
     <hint type="destinationlabel">
-     <x>182</x>
-     <y>290</y>
+     <x>187</x>
+     <y>295</y>
     </hint>
    </hints>
   </connection>
@@ -98,12 +110,28 @@
    <slot>slot_3rd()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>314</x>
-     <y>269</y>
+     <x>319</x>
+     <y>266</y>
     </hint>
     <hint type="destinationlabel">
-     <x>318</x>
-     <y>292</y>
+     <x>321</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>label</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>122</y>
     </hint>
    </hints>
   </connection>
